@@ -2,13 +2,7 @@ const User = require('../resources/users/user.model');
 const Board = require('../resources/boards/board.model');
 const Task = require('../resources/tasks/task.model');
 
-class ErrorHandler extends Error {
-  constructor(statusCode, message) {
-    super();
-    this.statusCode = statusCode;
-    this.message = message;
-  }
-}
+const { ErrorHandler } = require('../common/error-handler');
 
 const DataBase = {
   Users: [],
